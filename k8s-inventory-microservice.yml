@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: inventory-microservice-rs
+spec: 
+  replicas: 2
+  selector:
+    matchLabels: 
+      app: inventory-microservice
+  template: 
+    metadata: 
+      labels: 
+        app: inventory-microservice
+        env: dev
+        project: microservice-app
+    spec:
+      containers:
+      - name: inventory-microservice-container
+        image: classpathio/inventory-microservice
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: inventory-service
+spec:
+  ports:
+  - port: 80
+    targetPort: 9222
+    protocol: TCP
+  selector:
+    app: inventory-microservice
