@@ -4,15 +4,16 @@ import java.time.LocalDateTime;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.ToString;
 
-@NoArgsConstructor
+@RequiredArgsConstructor
 @Getter
 @ToString
 public class OrderEvent {
 	
-	private  Event event;
-	private Order payload;
+	private final  Event event;
+	private final Order payload;
 	private LocalDateTime timestamp;
 	
 
