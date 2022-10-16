@@ -1,2 +1,22 @@
 server:
   port: 9222
+
+spring:
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: orders-topic
+          content-type: application/json
+      kafka:
+        binder:
+          brokers: 3.111.168.143:9092
+          configuration:
+            request:
+              timeout:
+                ms: 20000
+            retry:
+              backoff:
+                ms: 500
+      default-binder: kafka
+        
