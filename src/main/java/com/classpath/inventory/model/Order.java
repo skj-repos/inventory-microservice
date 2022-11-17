@@ -11,8 +11,8 @@ import lombok.ToString;
 @ToString
 public class Order {
 	private long id;
-	private String customerName;
-	private String customerEmail;
+	private String name;
+	private String email;
 	private double price;
 	private LocalDate orderDate;
 }

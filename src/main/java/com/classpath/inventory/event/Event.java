@@ -1,4 +1,4 @@
-package com.classpath.inventory.model;
+package com.classpath.inventory.event;
 
 public enum Event {
 	
