@@ -1,13 +1,3 @@
 server:
   port: 9222
-spring:  
-  cloud:
-    function:
-      definition: consumer
-    stream:
-      kafka:
-        binder:
-          brokers: 13.233.190.33:9092
-      bindings:
-        consumer-in-0:
-          destination: orders-topic  
+
