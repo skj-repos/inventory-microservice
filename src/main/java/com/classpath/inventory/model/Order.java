@@ -10,9 +10,9 @@ import lombok.ToString;
 @Getter
 @ToString
 public class Order {
-	private long id;
+	private Long id;
 	private String name;
 	private String email;
 	private double price;
-	private LocalDate orderDate;
+	private LocalDate date;
 }
